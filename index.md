@@ -1,5 +1,5 @@
 ---
-layout: home2
+layout: home
 title: 
 description: "Muhammad Sajjad's website"
 tags: [Jekyll, theme, responsive, blog, template]
