@@ -1,0 +1,16 @@
+# Build and cache folders
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler/Gem related
+Gemfile.lock
+
+# Windows-related (optional but useful)
+.DS_Store
+Thumbs.db
+
+# Optional: Node/npm-related (only if using Grunt or npm scripts)
+node_modules/
+
+notes.txt
