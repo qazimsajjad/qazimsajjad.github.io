@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+{% include _head.html %}
+<style>
+a:link {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body class="page">
+<style>
+    /*********************************
+     The list of publication items
+     *********************************/
+/* The list of items */
+.biblist { }
+
+/* The item */
+.biblist li { }
+
+/* You can define custom styles for plstyle field here. */
+
+
+/*************************************
+ The box that contain BibTeX code
+ *************************************/
+div.noshow { display: none; }
+div.bibtex {
+	margin-right: 0%;
+	margin-top: 1.2em;
+	margin-bottom: 1em;
+	border: 1px solid silver;
+	padding: 0em 1em;
+	background: #ffffee;
+}
+div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;}</style>
+<script type="text/javascript">
+    <!--
+    // Toggle Display of BibTeX
+    function toggleBibtex(articleid) {
+        var bib = document.getElementById('bib_'+articleid);
+        if (bib) {
+            if(bib.className.indexOf('bibtex') != -1) {
+                bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+            }
+        } else {
+            return;
+        }
+    }
+-->
+    </script>
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <img src=
+    {% if page.image.feature contains 'http://' %}
+      "{{ page.image.feature }}"
+    {% elsif page.image.feature contains 'https://' %}
+      "{{ page.image.feature }}"
+    {% else %}
+      "{{ site.url }}/images/{{ page.image.feature }}"
+    {% endif %}
+  alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+  </div><!-- /.image-wrap -->
+{% endif %}
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <article>
+    <h1>{{ page.title }}</h1>
+    <div class="article-wrap">
+      {{ content }}
+
+<!----------------------------------------------------------------------------------->
+<!-- Generated from JabRef by PubList by Truong Nghiem at 12:49 on 2016.07.15. -->
+
+<!-------------------------------------------------------------------------------------------->
+<h4 style="margin-bottom:0px;padding-top:10px;">Spring 2025 </h4>
+ 		<ul> COMP423:  Information Retrieval </ul>
+ 		<ul> COMP315:  Artificial Intelligence </ul>
+ 		<ul> COMP230:  Programming for AI</ul>
+
+<h4 style="margin-bottom:0px;padding-top:10px;">Fall 2024 </h4>
+ 		<ul> COMP416:  Digital Image Processing </ul>
+ 		<ul> COMP327:  Advanced Programming </ul>
+ 		<ul> COMP102:  Programming Fundamentals (C++)</ul>
+	    
+<h4 style="margin-bottom:0px;padding-top:10px;">Spring 2024 </h4>
+ 		<ul> COMP423:  Information Retrieval </ul>
+ 		<ul> COMP315:  Artificial Neural Networks </ul>
+    <ul> COMP587:  Advanced Deep Learning</ul>
+
+	    
+<h4 style="margin-bottom:0px;padding-top:10px;">Spring 2023 </h4>
+ 		<ul> COMP416:  Digital Image Processing</ul>
+ 		<ul> COMP586: Advanced Machine Learning</ul>
+
+
+    </div><!-- /.article-wrap -->
+    {% if site.disqus_shortname and page.comments %}
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    {% endif %}
+  </article>
+</div><!-- /#index -->
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}          
+
+</body>
+</html>

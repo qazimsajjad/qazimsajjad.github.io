@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+{% include _head.html %}
+<style>
+a:link, a:visited { color: blue; background-color: transparent; text-decoration: none; }
+a:hover { color: red; text-decoration: underline; }
+a:active { color: yellow; text-decoration: underline; }
+</style>
+</head>
+
+<body class="page">
+<style>
+.biblist li { margin-bottom: 20px; }
+div.noshow { display: none; }
+div.bibtex {
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+  border: 1px solid silver;
+  padding: 0em 1em;
+  background: #ffffee;
+}
+div.bibtex pre { font-size: 75%; overflow: auto; width: 100%; padding: 0em 0em; }
+</style>
+<script type="text/javascript">
+function toggleBibtex(articleid) {
+  var bib = document.getElementById('bib_'+articleid);
+  if (bib) {
+    bib.className = bib.className.indexOf('noshow') === -1 ? 'bibtex noshow' : 'bibtex';
+  }
+}
+</script>
+
+{% include _browser-upgrade.html %}
+{% include _navigation.html %}
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <article>
+    <h1>{{ page.title }}</h1>
+    <div class="article-wrap">
+      {{ content }}
+      <p>For a complete and up-to-date list of research publications by Dr. Muhammad Sajjad, please visit his <a href="https://scholar.google.com.pk/citations?user=E4-dElIAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
+      <h4 style="margin-bottom:0px;padding-top:10px;">Most Cited Publications</h4>
+      <ul class="biblist">
+        <li>
+          <p>M. Sajjad, S. Khan, K. Muhammad, W. Wu, A. Ullah, S.W. Baik<br>
+          <em>Multi-grade brain tumor classification using deep CNN with extensive data augmentation</em>,<br>
+          <i>Journal of Computational Science</i>, 2019. <b>Cited by: 935+</b><br>
+          <a href="https://doi.org/10.1016/j.jocs.2018.12.003">[DOI]</a>
+          </p>
+        </li>
+        <li>
+          <p>A. Ullah, J. Ahmad, K. Muhammad, M. Sajjad, S.W. Baik<br>
+          <em>Action recognition in video sequences using deep bi-directional LSTM with CNN features</em>,<br>
+          <i>IEEE Access</i>, 2017. <b>Cited by: 913+</b><br>
+          <a href="https://ieeexplore.ieee.org/abstract/document/8121994/">[IEEE]</a>
+          </p>
+        </li>
+        <li>
+          <p>M Sajjad, ZA Khan, A Ullah, T Hussain, W Ullah, MY Lee, SW Baik<br>
+          <em>A novel CNN-GRU-based hybrid approach for short-term residential load forecasting</em>,<br>
+          <i>IEEE Access</i>, 2020. <b>Cited by: 525+</b><br>
+          <a href="https://ieeexplore.ieee.org/abstract/document/9141253/">[IEEE]</a>
+          </p>
+        </li>
+        <li>
+          <p>Mustaqeem, M. Sajjad, S. Kwon<br>
+          <em>Clustering-based speech emotion recognition by incorporating learned features and deep BiLSTM</em>,<br>
+          <i>IEEE Access</i>, 2020. <b>Cited by: 425+</b><br>
+          <a href="https://ieeexplore.ieee.org/abstract/document/9078789">[IEEE]</a>
+          </p>
+        </li>
+      </ul>
+
+      <h4 style="margin-bottom:0px;padding-top:10px;">Selected Publications as Corresponding Author</h4>
+      <ul class="biblist">
+        <li>
+          <p>M Hijji, K Ullah, M Alwakeel, A Alwakeel, F Aradah, FA Cheikh, M Sajjad, K Muhammad<br>
+          <em>Multiagent Sensor Integration and Knowledge Distillation System for Real-Time Autonomous Vehicle Navigation</em>,<br>
+          <i>IEEE Systems Journal</i>, 2025. <b>Published</b></p>
+        </li>
+        <li>
+          <p>M. Ayaz, M. Khan, M. Saqib, A. Khelifi, M. Sajjad, A. Elsaddik<br>
+          <em>MedVLM: Medical Vision-Language Model for Consumer Devices</em>,<br>
+          <i>IEEE Consumer Electronics Magazine</i>, 2024. <b>Published</b></p>
+        </li>
+        <li>
+          <p>K Muhammad, A Ullah, AS Imran, M Sajjad, MS Kiran, G Sannino, , V Albuquerque<br>
+          <em>Human Action Recognition using Attention based LSTM Network with Dilated CNN Features</em>,<br>
+          <i>Future Generation Computer Systems</i>, 2021. <b>Cited by 257+</b></p>
+        </li>
+        <li>
+          <p>H Ullah, K Muhammad, M Irfan, S Anwar, M Sajjad, AS Imran, Ali Shariq Imran, V Albuquerque<br>
+          <em>Light-DehazeNet: A Novel Lightweight CNN Architecture for Single Image Dehazing</em>,<br>
+          <i>IEEE Transactions on Image Processing</i>, 2021. <b>Cited by: 166+</b></p>
+        </li>
+      </ul>
+
+      <h4 style="margin-bottom:0px;padding-top:10px;">Additional Publications (As First/Co-Author)</h4>
+      <ul class="biblist">
+        <li>
+          <p>M. Sajjad, M. Nasir, K. Muhammad, S. Khan, Z. Jan, A.K. Sangaiah<br>
+          <em>Raspberry Pi assisted face recognition framework for enhanced law-enforcement services in smart cities</em>,<br>
+          <i>Future Generation Computer Systems</i>, 2020. <b>Cited by: 257</b></p>
+        </li>
+        <li>
+          <p>M. Sajjad, S. Zahir, A. Ullah, Z. Akhtar, K. Muhammad<br>
+          <em>Human behavior understanding in big multimedia data using CNN based facial expression recognition</em>,<br>
+          <i>Mobile Networks and Applications</i>, 2020. <b>Cited by: 119</b></p>
+        </li>
+        <li>
+          <p>M. Sajjad, F.U.M. Ullah, M. Ullah, G. Christodoulou, F.A. Cheikh, M. Hijji<br>
+          <em>A comprehensive survey on deep facial expression recognition: challenges, applications, and future guidelines</em>,<br>
+          <i>Alexandria Engineering Journal</i>, 2023. <b>Cited by: 114</b></p>
+        </li>
+      </ul>
+    </div><!-- /.article-wrap -->
+    {% if site.disqus_shortname and page.comments %}
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    {% endif %}
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}
+</body>
+</html>

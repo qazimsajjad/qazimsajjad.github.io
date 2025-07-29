@@ -1,0 +1,431 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+{% include _head.html %}
+</head>
+
+<body class="page">
+<style>
+/* The list of items */
+.biblist { }
+
+/* The item */
+.biblist li { }
+
+/* You can define custom styles for plstyle field here. */
+
+/*************************************
+ The box that contain BibTeX code
+ *************************************/
+div.noshow { display: none; }
+div.bibtex {
+	margin-right: 0%;
+	margin-top: 1.2em;
+	margin-bottom: 1em;
+	border: 1px solid silver;
+	padding: 0em 1em;
+	background: #ffffee;
+}
+div.bibtex pre { font-size: 75%; overflow: auto; width: 100%; padding: 0em 0em;}
+
+/* Custom styles for people page */
+.student-entry {
+	margin-bottom: 15px;
+	padding: 10px;
+	border-left: 3px solid #e0e0e0;
+	background-color: #fafafa;
+}
+
+.student-name {
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+.student-details {
+	margin-top: 5px;
+	color: #555;
+	font-size: 0.95em;
+}
+
+.thesis-title {
+	font-style: italic;
+	color: #666;
+	margin-top: 3px;
+}
+
+.institution {
+	color: #3498db;
+	font-weight: 500;
+}
+
+.section-header {
+	background-color: #34495e;
+	color: white;
+	padding: 10px 15px;
+	margin: 20px 0 10px 0;
+	border-radius: 5px;
+}
+
+.subsection-header {
+	background-color: #7f8c8d;
+	color: white;
+	padding: 8px 12px;
+	margin: 15px 0 10px 0;
+	border-radius: 3px;
+	font-size: 1.1em;
+}
+
+.collaborators-list {
+	line-height: 1.8;
+	text-align: justify;
+}
+
+.status-completed {
+	background-color: #d5f4e6;
+	border-left-color: #27ae60;
+}
+
+.status-progress {
+	background-color: #fff3cd;
+	border-left-color: #f39c12;
+}
+</style>
+
+<script type="text/javascript">
+    <!--
+    // Toggle Display of BibTeX
+    function toggleBibtex(articleid) {
+        var bib = document.getElementById('bib_'+articleid);
+        if (bib) {
+            if(bib.className.indexOf('bibtex') != -1) {
+                bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+            }
+        } else {
+            return;
+        }
+    }
+-->
+</script>
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <img src=
+    {% if page.image.feature contains 'http://' %}
+      "{{ page.image.feature }}"
+    {% elsif page.image.feature contains 'https://' %}
+      "{{ page.image.feature }}"
+    {% else %}
+      "{{ site.url }}/images/{{ page.image.feature }}"
+    {% endif %}
+  alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+  </div><!-- /.image-wrap -->
+{% endif %}
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <article>
+    <h1>{{ page.title }}</h1>
+    <div class="article-wrap">
+      {{ content }}
+
+<!-------------------------------------------------------------------------------------------->
+<p>I have been fortunate to work with amazing students, colleagues and collaborators. Below is a non-exhaustive list.</p>
+
+<!-------------------------------------------------------------------------------------------------------->
+<div class="section-header">
+<h3 style="margin:0;">Current Students</h3>
+</div>
+
+<div class="subsection-header">
+<h4 style="margin:0;">Bachelor's Students (Research Assistants)</h4>
+</div>
+
+<div class="student-entry status-progress">
+<div class="student-name"><a href="https://github.com/ImranNawar">Imran Nawar</a></div>
+<div class="student-details">Research Assistant at Digital Image Processing Lab - <span class="institution">Islamia College, Peshawar</span></div>
+<div class="thesis-title">BS Thesis: Deep Learning Based Autonomous Navigation Over Economical Hardware</div>
+</div>
+
+<div class="student-entry status-progress">
+<div class="student-name"><a href="https://github.com/wajht7553">Wajahat Ullah</a></div>
+<div class="student-details">Research Assistant at Digital Image Processing Lab - <span class="institution">Islamia College, Peshawar, Pakistan</span></div>
+<div class="thesis-title">BS Thesis: Deep Learning Based Autonomous Navigation Over Economical Hardware</div>
+</div>
+
+<div class="student-entry status-progress">
+<div class="student-name"><a href="https://github.com/">Bilal Ahmad</a></div>
+<div class="student-details">Research Assistant at Digital Image Processing Lab - <span class="institution">Islamia College, Peshawar</span></div>
+<div class="thesis-title">MS Thesis: Weekly supervised Multimodal Activity Recognition</div>
+</div>
+
+<div class="student-entry status-progress">
+<div class="student-name"><a href="https://www.linkedin.com/in/muhammad-saqib-3216a0267">Muhammad Saqib</a></div>
+<div class="student-details">Research Assistant at Digital Image Processing Lab - <span class="institution">Islamia College, Peshawar</span></div>
+<div class="thesis-title">Project: Campus Management System</div>
+</div>
+
+<div class="student-entry status-progress">
+<div class="student-name">Muhammad Fawad</div>
+<div class="student-details">Research Assistant at Digital Image Processing Lab - <span class="institution">Islamia College, Peshawar</span></div>
+<div class="thesis-title">Research: Deepfake Detection (In Progress)</div>
+</div>
+
+
+
+<div class="student-entry status-progress">
+<div class="student-name"><a href="https://github.com/Farooqshehzad27">Muhammad Farooq</a></div>
+<div class="student-details">Research Assistant at Digital Image Processing Lab - <span class="institution">Islamia College, Peshawar</span></div>
+<div class="thesis-title">Research: Deepfakes Detection</div>
+</div>
+
+<div class="student-entry status-progress">
+<div class="student-name">Muhammad Abbas</div>
+<div class="student-details">Research Assistant at Digital Image Processing Lab - <span class="institution">Islamia College, Peshawar</span></div>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------->
+<div class="section-header">
+<h3 style="margin:0;">Alumni & Graduated Students</h3>
+</div>
+
+<div class="subsection-header">
+<h4 style="margin:0;">Faculty & Industry Professionals</h4>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com.pk/citations?user=k5oUZyQAAAAJ&hl=en">Khan Muhammad</a></div>
+<div class="student-details">Assistant Professor - <span class="institution">Sungkyunkwan University, Seoul, South Korea</span></div>
+<div class="thesis-title">BS: Data Hiding in Images and Videos using Stenographic Techniques<br>
+MS/PhD: Intelligent Fire Scene Analysis using Efficient Convolutional Neural Networks</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=JCbmww8AAAAJ&hl">Amin Ullah</a></div>
+<div class="student-details">Senior AI/ML Software Engineer - <span class="institution">Boeing Research & Technology Software, Seattle, WA, USA</span></div>
+<div class="thesis-title">BS: Integrating salient colors with rotational invariant texture features for image representation in retrieval systems<br>
+MS/PhD: A Study of Sequential Patterns Analysis in Video for Action and Activity Recognition</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=TdaSaRgAAAAJ&hl=en">Ijaz Ul Haq</a></div>
+<div class="student-details">Research Fellow - <span class="institution">University of Michigan, USA</span></div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com.pk/citations?hl=en&user=4fU0t_oAAAAJ">Tanveer Hussain</a></div>
+<div class="student-details">University Lecturer - <span class="institution">Edge Hill University, Ormskirk, UK</span></div>
+<div class="thesis-title">BS: Let the deaf understand<br>
+MS/PhD: A Study and Development of Deep Models for Multi-view Video Summarization</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.co.kr/citations?user=0kXugtIAAAAJ&hl=en">Salman Khan</a></div>
+<div class="student-details">Post Doc. (Research Fellow) - <span class="institution">Oxford Brookes University, Oxford, UK</span></div>
+<div class="thesis-title">BS: Multi-Grade Brain Tumor Classification using Deep Convolution Neural Network<br>
+MS: Deep learning-based smoke detection and segmentation in surveillance videos<br>
+PhD: Spatiotemporal Event Graphs for Dynamic Scene Understanding</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=9-S6easAAAAJ&hl=en">Muhammad Irfan</a></div>
+<div class="student-details">PhD Scholar - <span class="institution">Oakland University, Michigan, United States</span></div>
+<div class="thesis-title">BS: An efficient and scalable simulation model for autonomous vehicles with economical hardware<br>
+MS: Deepview: Deep-learning-based users field of view selection in 360 videos for industrial environments<br>
+PhD: Medical Image Analysis (in progress)</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=uEZhRWAAAAAJ&hl=en">Mustaqeem Khan</a></div>
+<div class="student-details">Research Scientist - <span class="institution">Mohamed Bin Zayed University of Artificial Intelligence</span></div>
+<div class="thesis-title">MS: Human Action Recognition using Video Stream<br>
+PhD: Advanced Study of Emotion Recognition Based on Speech Signals using Deep Learning</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?hl=en&user=EhNpxlEAAAAJ&view_op=list_works&sortby=pubdate">Samee Ullah Khan</a></div>
+<div class="student-details">Post-Doctoral Fellow - <span class="institution">Khalifa University, Abu Dhabi, UAE</span></div>
+<div class="thesis-title">MS: Efficient Computational Model for Automatic Detection and Classification of DNA Proteins<br>
+PhD: A Study of Discriminative Features Analysis for Person Re-Identification using Deep Learning</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=cVzxZ6YAAAAJ&hl=en">Waseem Ullah</a></div>
+<div class="student-details">Post Doc. (Research Fellow) - <span class="institution">Mohamed bin Zayed University of Artificial Intelligence</span></div>
+<div class="thesis-title">MS: Gene Regulation and Splice Site Prediction using Machine Learning Techniques<br>
+PhD: A Study of Sequential Patterns Analysis in Surveillance Videos for Anomaly Detection and Recognition</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=F0oIOJQAAAAJ&hl=en">Umair Haroon</a></div>
+<div class="student-details">Pre-Doc. Researcher - <span class="institution">Universitat de Barcelona, Spain</span></div>
+<div class="thesis-title">BS: Raspberry Pi Based Real-Time Hand-Gestures Recognition Using Flex Sensors<br>
+MS: A Study of Human Interaction Recognition based on Dual-Stream Sequence Learning Framework<br>
+PhD: In progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=9-S6easAAAAJ&hl=en">Imran Ullah Khan</a></div>
+<div class="student-details">Post Doc Researcher - <span class="institution">Sejong University</span></div>
+<div class="thesis-title">BS: RFID based authentication and registration system<br>
+MS: Human Physical Activity Recognition</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com.pk/citations?user=Xyyj55wAAAAJ&hl=en">Mansoor Nasir</a></div>
+<div class="student-details">PhD Completed - <span class="institution">Islamia College, Peshawar Pakistan</span></div>
+<div class="thesis-title">MS/PhD: AI-enabled Economical IoT Devices for Actionable Intelligence in Multimedia Surveillance Networks</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=TmDD6z8AAAAJ&hl=en">Zulfiqar Ahmad Khan</a></div>
+<div class="student-details">PhD Completed - <span class="institution">Sejong University, South Korea</span></div>
+<div class="thesis-title">BS: Home Automation using Raspberry Pi</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com.pk/citations?user=xnXPj0UAAAAJ&hl=en">Hayat Ullah</a></div>
+<div class="student-details">PhD Student - <span class="institution">Florida Atlantic University, Boca Raton, FL, USA</span></div>
+<div class="thesis-title">Research: Salient Events Detection in Soccer Videos using CNN and LSTM, Panoramic Image Quality Assessment<br>
+PhD: In Progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name">Noman Khan</div>
+<div class="student-details">Post-Doc Researcher - <span class="institution">Yonsei University</span></div>
+<div class="thesis-title">BS: Road Safety for Kids based on Virtual Reality Interaction Physical Space<br>
+MS/PhD: A Study of Advanced Deep Models for Power Consumption and Generation Forecasting</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?hl=en&user=gGLADtoAAAAJ">Muhammad Nazir</a></div>
+<div class="student-details">Associate Professor - <span class="institution">HITEC University Taxila</span></div>
+<div class="thesis-title">BS: Automation of Chain of Pharmacy<br>
+MS: Mining of Emerging Patterns using Data Mining<br>
+PhD: Facial Expression Recognition using Machine Learning techniques</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=g1DEcpQAAAAJ&hl=en">Adnan Hussain</a></div>
+<div class="student-details">PhD Scholar - <span class="institution">Sejong University, South Korea</span></div>
+<div class="thesis-title">BS: Investigating Role of SIFT and SURF in Panorama Generation<br>
+MS: A Comprehensive Study on Deep Active Learning Based Wild Animal Classification Method for Camera Trap<br>
+PhD: In progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=a98oUrsAAAAJ&hl=en&oi=ao">Hikmat Yar</a></div>
+<div class="student-details">PhD Scholar - <span class="institution">Sejong University, South Korea</span></div>
+<div class="thesis-title">Research: Based on Hybrid Descriptors<br>
+PhD: In progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=CSbY2VsAAAAJ&hl=en">Altaf Hussain</a></div>
+<div class="student-details">PhD Scholar - <span class="institution">Sejong University, South Korea</span></div>
+<div class="thesis-title">MS: Intelligent Camera Prioritization in Large Scale Surveillance Network using Violent Activity Recognition with 3D CNN<br>
+PhD: In progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=DG6LGw8AAAAJ&hl=en">Siraj</a></div>
+<div class="student-details">College Lecturer - <span class="institution">Islamia College, Peshawar Pakistan</span></div>
+<div class="thesis-title">MS: Resource Aware Frameworks for Leukocytes Segmentation and Classification in Blood Smear Images<br>
+PhD: Detection and Classification of Cells in Blood Smear Images Using Convolutional Neural Network</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com.pk/citations?user=Xyyj55wAAAAJ&hl=en">Imranuddin</a></div>
+<div class="student-details">PhD Scholar - <span class="institution">Islamia College, Peshawar Pakistan</span></div>
+<div class="thesis-title">MS: Pashto Handwritten Character Recognition using Neural Networks<br>
+PhD: In Progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=YJ5X6HYAAAAJ&hl=en">Muhammad Munsif</a></div>
+<div class="student-details">PhD Scholar - <span class="institution">Sejong University, South Korea</span></div>
+<div class="thesis-title">BS: Proximal Policy Optimization Assisted Collision Avoidance and Motion Planning for Autonomous Vehicles in a Complex VR-Based Environment<br>
+PhD: In progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://github.com/ImranNawar">Rafi Ullah Khalil</a></div>
+<div class="student-details">PhD Scholar - <span class="institution">Islamia College, Peshawar Pakistan</span></div>
+<div class="thesis-title">PhD: In Progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=uxndv_oAAAAJ&hl=en&oi=ao">Sareer Ul Amin</a></div>
+<div class="student-details">PhD Scholar - <span class="institution">Chung-Ang University</span></div>
+<div class="thesis-title">BS: Anomaly detection in surveillance video<br>
+MS: Anomaly Detection<br>
+PhD: In progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=egchmHYAAAAJ&hl=en">Muhammad Saad</a></div>
+<div class="student-details">Research Assistant at Metaverse Center - <span class="institution">Mohamed Bin Zayed University of Artificial Intelligence</span></div>
+<div class="thesis-title">Research: Visual explanation of deep learning based breast cancer classification via gradient localization</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://scholar.google.com/citations?user=L4ermd0AAAAJ&hl=en">Muhammad Saeed</a></div>
+<div class="student-details">Research Assistant at Metaverse Center - <span class="institution">Mohamed Bin Zayed University of Artificial Intelligence</span></div>
+<div class="thesis-title">Research: Vit based covid-19 detection and classification from cxr images</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://github.com/afaqislamia191055">Muhammad Afaq</a></div>
+<div class="student-details">Research Assistant at IM Lab - <span class="institution">Sejong University, South Korea</span></div>
+<div class="thesis-title">BS: Developing a Highly Effective Deep Learning Model for Anomaly Detection in Videos Sequences<br>
+MS: In progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://www.linkedin.com/in/aizaz-ali-shah-56b035302/">Aizaz Ali Shah</a></div>
+<div class="student-details">Research Assistant at IM Lab - <span class="institution">Sejong University, South Korea</span></div>
+<div class="thesis-title">Research: Image Reconstruction for Masked Faces with Convolutional Autoencoder<br>
+MS: In progress</div>
+</div>
+
+<div class="student-entry status-completed">
+<div class="student-name"><a href="https://github.com/ayazkhan789">Muhammad Ayaz</a></div>
+<div class="student-details">Research Assistant and Master Student - <span class="institution">Chung-Ang University</span></div>
+<div class="thesis-title">Research: Towards Reliable Fire and Smoke Instance Segmentation in Challenging Environments: Vision-Based Approach</div>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------->
+<div class="section-header">
+<h3 style="margin:0;">Collaborators</h3>
+</div>
+
+<div class="collaborators-list">
+<p><a href="http://www.porikli.com/">Prof. Fatih Porikli</a>, 
+</p>
+</div>
+
+    </div><!-- /.article-wrap -->
+    {% if site.disqus_shortname and page.comments %}
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    {% endif %}
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}          
+
+</body>
+</html>
