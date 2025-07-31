@@ -9,9 +9,9 @@ tags: [Jekyll, theme, responsive, blog, template]
 <a id="Biography-page" class="anchor" href="#biography-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Muhammad Sajjad Homepage</h2>
 <div style="text-align: justify; display: block; margin-right: auto;">
 
-I am an Associate Professor at the Department of Computer Science, Islamia College Peshawar (Public Sector University), Khyber Pakhtunkhwa, Pakistan. I'm also the Founder and Head of Digital Image Processing Lab. Previously, I was a leading researcher on the ALAMEDA project at NTNU Norway.
+I am an Associate Professor at the Department of Computer Science, Islamia College Peshawar (Public Sector University), Khyber Pakhtunkhwa, Pakistan. I'm also the Founder and Head of <span style="color:blue">Digital Image Processing Lab</span>. Previously, I was a leading researcher on the ALAMEDA project at NTNU Norway.
 
-<br><strong>In academia</strong>, I maintain strong research collaborations with international institutions, particularly with the Intelligent Media Lab at Sejong University, Seoul, where I remotely supervise PhD and MS students on computer vision and deep learning projects. I also collaborate with researchers at NTNU Norway on advanced computer vision applications. My research spans multiple domains including medical image analysis, video summarization, content-based retrieval, and multimodal vision-language models, with over 7,900 citations and an h-index of 43.
+<br><strong>In academia</strong>, I maintain strong research collaborations with international institutions, particularly with the Intelligent Media Lab at Sejong University, Seoul, South Korea, where I remotely supervise PhD and MS students on computer vision and deep learning projects. I also collaborate with researchers at NTNU Norway on advanced computer vision applications. My research spans multiple domains including medical image analysis, video summarization, content-based retrieval, and multimodal vision-language models, with over 7,900 citations and an h-index of 43.
 
 <h2>
 <a id="education" class="anchor" href="#education" aria-hidden="true"><span class="octicon octicon-link"></span></a>Education</h2>
@@ -19,16 +19,16 @@ I am an Associate Professor at the Department of Computer Science, Islamia Colle
 <hr />
 
 <h2><a class="anchor" href="#research-interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research Interests</h2>
-<p>Since commencing my Ph.D., I have contributed to numerous research projects in areas such as multimedia analytics using ML/DL, health digitization, medical image analysis, intelligent surveillance systems, and autonomous navigation. My work has been published in several top-tier journals, including IEEE Transactions on Image Processing, Intelligent Transportation Systems, Industrial Informatics, IEEE Sensors Journal, IEEE Internet of Things Journal, Elsevier Information Sciences, Future Generation Computer Systems, Computers in Biology and Medicine, International Journal of Information Management, and ACM Transactions on Multimedia Computing, Communications, and Applications. My research interests also include explainable AI, federated learning models, vision-LLM models, diffusion models, and meta-learning.</p>
+<p>Since commencing my Ph.D., I have contributed to numerous research projects in areas such as multimedia analytics using ML/DL, medical image analysis, intelligent surveillance systems, and autonomous navigation. My work has been published in several top-tier journals, including IEEE Transactions on Image Processing, Intelligent Transportation Systems, Industrial Informatics, IEEE Sensors Journal, IEEE Internet of Things Journal, Elsevier Information Sciences, Future Generation Computer Systems, Computers in Biology and Medicine, International Journal of Information Management, and ACM Transactions on Multimedia Computing, Communications, and Applications. My research interests also include explainable AI, federated learning models, vision-LLM models, and  diffusion models.</p>
 <hr />
 
 <h2><a class="anchor" href="#postdoctoral-and-collaboration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Postdoctoral Research & International Collaborations</h2>
 <ul>
-  <li>ERCIM Postdoctoral Research Fellow at NTNU (2021–2022)</li>
-  <li>Led ALAMEDA project at NTNU (2021–2023): AI for early brain disease diagnosis, including emotion and gait analysis toolkits</li>
-  <li>Research collaborations with Intelligent Media Lab (Sejong University), VIS2KNOW Lab (Sungkyunkwan University), and others</li>
-  <li>Participation in multi-country project on infectious disease prediction (2021–2023)</li>
-  <li>Collaboration with DIP and IM Lab alumni across global institutions</li>
+  <li>Led ALAMEDA project at NTNU (2021–2023): AI for early brain disease diagnosis, including emotion and gait analysis toolkits.</li>
+  <li>ERCIM Postdoctoral Research Fellow at NTNU (2021–2022).</li>
+  <li>Research collaborations with Intelligent Media Lab (Sejong University), VIS2KNOW Lab (Sungkyunkwan University), and others.</li>
+  <li>Participation in multi-country project on infectious disease prediction (2021–2023).</li>
+  <li>Collaboration with DIP and IM Lab alumni across global institutions.</li>
 </ul>
 <hr />
 
@@ -41,7 +41,7 @@ I am an Associate Professor at the Department of Computer Science, Islamia Colle
 <ul>
   <li>Associate Professor, ICP (2018–Present)</li>
   <li>Postdoc Fellow & Researcher, NTNU Norway (2021–2023)</li>
-  <li>Assistant Professor & Lecturer, ICP and other institutions (2008–2018)</li>
+  <li>Lecturer & Assistant Professor, Islamia College Peshawar (2008–2018)</li>
 </ul>
 <h3>Administrative Roles</h3>
 <ul>
